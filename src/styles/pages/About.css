@@ -1,0 +1,220 @@
+/* src/styles/pages/About.css */
+
+/* 1. Variables & Base -------------------------------------------------- */
+:root {
+  --color-bg: #fafafa;
+  --color-primary: #1e9ff2;
+  --color-text: #333;
+  --color-muted: #555;
+  --color-accent: #eef7ff;
+  --font-sans: 'Segoe UI', Roboto, sans-serif;
+  --line-height: 1.6;
+  --radius: 8px;
+  --transition: 0.3s ease;
+}
+
+.about__hero,
+.about__section,
+.about__cta {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+  background: #fff;
+}
+
+body {
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: var(--line-height);
+}
+
+/* 2. Hero / Intro ------------------------------------------------------ */
+.about__hero {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.about__photo {
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform var(--transition);
+}
+.about__photo:hover {
+  transform: scale(1.05);
+}
+
+.about__intro {
+  flex: 1;
+}
+
+.about__intro h1 {
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.about__intro p {
+  font-size: 1.125rem;
+  color: var(--color-muted);
+  margin-bottom: 0;
+}
+
+/* 3. Section Headings & Text ------------------------------------------- */
+.about__section {
+  margin-top: 3rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.about__section h2 {
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+.about__section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 3rem;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+.about__section p,
+.about__section ul {
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+/* Timeline list styling */
+.about__timeline ul {
+  list-style: none;
+  padding: 0;
+}
+.about__timeline li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.about__timeline li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* 4. Skills Grid ------------------------------------------------------- */
+.about__skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.about__skills li {
+  background: var(--color-accent);
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  font-size: 0.95rem;
+  transition: background var(--transition);
+}
+.about__skills li:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* 5. Call-To-Action ---------------------------------------------------- */
+.about__cta {
+  text-align: center;
+  margin: 4rem auto;
+}
+
+.about__cta p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.about__cta .btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background var(--transition);
+}
+.about__cta .btn-primary:hover {
+  background: #005fa3;
+}
+
+/* 6. Lightbox ---------------------------------------------------------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.lightbox__content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.lightbox__content img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  line-height: 1.8rem;
+  cursor: pointer;
+}
+
+/* 7. Responsive Breakpoints ------------------------------------------- */
+@media (max-width: 768px) {
+  .about__hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about__photo {
+    margin-bottom: 1rem;
+    width: 150px;
+    height: 150px;
+  }
+  .about__intro h1 {
+    font-size: 2rem;
+  }
+}

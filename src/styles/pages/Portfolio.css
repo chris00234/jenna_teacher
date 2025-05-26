@@ -1,0 +1,142 @@
+/* src/styles/pages/Portfolio.css */
+
+/* 1. Variables & Base */
+:root {
+  --color-primary: #1e9ff2;
+  --color-secondary: #005fa3;
+  --color-text: #333;
+  --color-muted: #555;
+  --color-bg-light: #f9f9f9;
+  --font-sans: 'Segoe UI', Roboto, sans-serif;
+  --line-height: 1.6;
+  --radius: 8px;
+  --transition: 0.3s ease;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: var(--line-height);
+  background: #fafafa;
+}
+
+/* 2. Intro */
+.portfolio__intro {
+  max-width: 960px;
+  margin: 3rem auto 2rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+.portfolio__intro h1 {
+  font-size: 2.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+.portfolio__subtitle {
+  font-size: 1.125rem;
+  color: var(--color-muted);
+}
+
+/* 3. Section Wrapper */
+.portfolio__section {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+.portfolio__section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  position: relative;
+}
+.portfolio__section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 4rem;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* 4. Grid of Previews */
+.portfolio__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1.5rem;
+}
+
+/* 5. Preview Card Styling */
+.doc-preview {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.doc-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.doc-preview__embed {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  background: var(--color-bg-light);
+}
+.doc-preview__embed iframe,
+.doc-preview__embed object {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+.doc-preview__caption {
+  padding: 1rem;
+  text-align: center;
+}
+.doc-preview__caption strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+.doc-preview__caption span {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+/* 6. Document Lists */
+.portfolio__docs {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.portfolio__docs li {
+  margin-bottom: 0.75rem;
+}
+.portfolio__docs a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+.portfolio__docs a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+/* 7. Responsive */
+@media (max-width: 768px) {
+  .portfolio__intro h1 {
+    font-size: 2.25rem;
+  }
+  .portfolio__section h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,129 @@
+/* src/styles/pages/Contact.css */
+
+/* 1. Variables & Base */
+:root {
+  --color-bg: #fafafa;
+  --color-primary: #1e9ff2;
+  --color-secondary: #005fa3;
+  --color-text: #333;
+  --color-muted: #666;
+  --font-sans: 'Segoe UI', Roboto, sans-serif;
+  --line-h: 1.6;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.05);
+  --transition: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: var(--line-h);
+}
+
+/* 2. Container Card */
+.contact__container {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2.5rem 1.5rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+/* 3. Page Title */
+.contact__container > h1 {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 2rem;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.contact__container > h1::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* 4. Thank You Text */
+.contact__thankyou {
+  font-size: 1.125rem;
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* 5. Content Layout */
+.contact__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* 6. Photo */
+.contact__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+.contact__photo:hover {
+  transform: scale(1.05);
+}
+
+/* 7. Contact Info */
+.contact__info {
+  text-align: left;
+  min-width: 200px;
+}
+.contact__info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.contact__info strong {
+  color: var(--color-primary);
+}
+.contact__info a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.contact__info a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+/* 8. Responsive */
+@media (max-width: 600px) {
+  .contact__container {
+    padding: 2rem 1rem;
+  }
+  .contact__container > h1 {
+    font-size: 2.25rem;
+  }
+  .contact__thankyou {
+    text-align: center;
+  }
+  .contact__photo {
+    width: 150px;
+    height: 150px;
+  }
+  .contact__info {
+    text-align: center;
+  }
+}

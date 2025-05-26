@@ -1,0 +1,183 @@
+/* src/styles/pages/CertificationEducation.css */
+
+/* 1. Variables & Base */
+:root {
+  --color-bg: #f9f9f9;
+  --color-primary: #1e9ff2;
+  --color-secondary: #005fa3;
+  --color-text: #333;
+  --color-muted: #555;
+  --font-sans: 'Segoe UI', Roboto, sans-serif;
+  --line-height: 1.6;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --transition: 0.3s ease;
+}
+
+body {
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  line-height: var(--line-height);
+}
+
+/* 2. Page Header Banner */
+/* Updated Header Styles */
+
+.certedu__container > h1 {
+  display: inline-block;           /* shrink to fit text */
+  margin: 0 0 1.5rem;              /* bottom spacing */
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  border-bottom: 4px solid var(--color-primary);
+  padding-bottom: 0.25rem;         /* space under text */
+  background: none;                /* ensure no bg */
+}
+
+
+/* 3. Main Container Card */
+.certedu__container {
+  max-width: 840px;
+  margin: -1.5rem auto 2rem; /* overlap header slightly */
+  margin-top: 30px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  padding: 2rem 1.5rem;
+}
+
+/* 4. Section Headings */
+.certedu__container h2 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.certedu__container h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 4rem;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+.certedu__container h3 {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* 5. Credential Image */
+.certedu__image-wrapper {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.certedu__image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+.certedu__image-wrapper img:hover {
+  transform: scale(1.02);
+}
+
+/* 6. Divider */
+.certedu__divider {
+  border: none;
+  height: 1px;
+  background: var(--color-muted);
+  margin: 2rem 0;
+}
+
+/* 7. Education Grid */
+.certedu__education-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.certedu__edu-left img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.certedu__edu-right h3 {
+  margin: 0;
+}
+.certedu__edu-dates {
+  color: var(--color-primary);
+  font-weight: 500;
+  margin: 0.25rem 0 1rem;
+}
+.certedu__edu-degree {
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* 8. Courses List */
+.certedu__courses-title {
+  font-size: 1.25rem;
+  margin: 2rem 0 1rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+.certedu__courses {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+.certedu__courses > li {
+  margin-bottom: 1rem;
+}
+.certedu__courses li ul {
+  list-style: circle;
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+.certedu__courses li ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* 9. Professional Identity Section */
+.certedu__section {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-muted);
+}
+.certedu__section h2 {
+  margin-top: 0;
+}
+.certedu__section p {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+/* 10. Responsive Tweaks */
+@media (max-width: 768px) {
+  .certedu__education-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .certedu__edu-left {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certedu__container {
+    padding: 1.5rem 1rem;
+  }
+  .certedu__header h1 {
+    font-size: 1.75rem;
+  }
+}

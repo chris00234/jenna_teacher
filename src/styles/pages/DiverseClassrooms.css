@@ -1,0 +1,102 @@
+/* src/styles/pages/DiverseClassrooms.css */
+
+/* 1. Variables & Base */
+:root {
+  --color-bg: #f9f9f9;
+  --color-primary: #1e9ff2;
+  --color-text: #333;
+  --color-muted: #555;
+  --font-sans: 'Segoe UI', Roboto, sans-serif;
+  --line-height: 1.6;
+  --radius: 8px;
+  --transition: 0.3s ease;
+}
+
+body {
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: var(--line-height);
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Container Card */
+.diverse__container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* 3. Page Header */
+.diverse__container > h1 {
+  display: inline-block;                   /* shrink to its text width */
+  margin: 2rem auto 1rem;                  /* space above and below */
+  margin-left: 1rem;                     /* space to the left */
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  background: transparent !important;      /* override any leftover bg */
+  padding: 0;                              /* remove old padding */
+  border-bottom: 4px solid var(--color-primary);
+  padding-bottom: 0.25rem;                 /* space between text and underline */
+}
+
+/* 4. Sections */
+.diverse__container h2 {
+  display: inline-block;       /* shrink to text width */
+  position: relative;          
+  margin: 2rem 1rem 1rem;      /* keep your spacing */
+  font-size: 1.75rem;
+  color: var(--color-primary);
+}
+
+.diverse__container h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--color-primary);
+  margin-top: 0.25rem;
+  border-radius: 2px;
+}
+
+
+/* 5. Paragraphs */
+.diverse__container p {
+  margin: 0 1rem 1.5rem;
+  color: var(--color-muted);
+  text-align: justify;
+}
+
+/* 6. Highlight Box for Examples */
+.diverse__container blockquote {
+  margin: 0 1rem 1.5rem;
+  padding: 1rem 1.5rem;
+  background: var(--color-bg);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius);
+  color: var(--color-text);
+}
+
+/* 7. Responsive */
+@media (max-width: 600px) {
+  .diverse__container {
+    margin: 2rem 1rem;
+  }
+  .diverse__container h1 {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .diverse__container h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 1rem 0.75rem;
+  }
+  .diverse__container p,
+  .diverse__container blockquote {
+    margin: 0 1rem 1rem;
+  }
+}

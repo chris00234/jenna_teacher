@@ -1,0 +1,202 @@
+/* src/styles/pages/Home.css */
+
+/* 1. Variables & Base */
+:root {
+  --color-primary: #1e9ff2;
+  --color-secondary: #005fa3;
+  --color-text: #333;
+  --color-muted: #555;
+  --color-bg-light: #f9f9f9;
+  --font-sans: 'Segoe UI', Roboto, sans-serif;
+  --line-height: 1.6;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: var(--line-height);
+}
+
+/* 2. Hero Section */
+.home__hero {
+  position: relative;
+  background: url('../assets/hero-bg.jpg') center/cover no-repeat;
+  padding: 6rem 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.home__hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.home__hero-content {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.home__hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.home__hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* CTA buttons side by side */
+.home__hero-cta {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+/* 3. About Preview */
+.home__about-preview {
+  max-width: 700px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.home__about-preview h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.home__about-preview p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-muted);
+}
+
+/* 4. Portfolio Preview */
+.home__portfolio-preview {
+  background: var(--color-bg-light);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.home__portfolio-preview h2 {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+/* improved grid with max card width and centering */
+.home__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-wrapper-big .card__img{
+    height: 400px;
+}
+
+/* 5. Card Overrides */
+.card {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__content {
+  padding: 1.25rem;
+  flex: 1;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.card__body {
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* 6. Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--color-secondary);
+}
+
+.btn-secondary {
+  background: #fff;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* 7. Responsive */
+@media (max-width: 768px) {
+  .home__hero h1 {
+    font-size: 2.5rem;
+  }
+  .home__hero p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home__hero-content {
+    padding: 0 1rem;
+  }
+  .home__hero h1 {
+    font-size: 2rem;
+  }
+  .home__hero p {
+    font-size: 1rem;
+  }
+  .home__hero-cta {
+    flex-direction: column;
+  }
+}
