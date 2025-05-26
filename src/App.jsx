@@ -10,6 +10,7 @@ import DiverseClassrooms from "./pages/DiverseClassrooms";
 import CertificationEducation from "./pages/CertificationEducation";
 import TeachingExperience from "./pages/TeachingExperience";
 import Contact from "./pages/Contact";
+import ScrollToTop from './components/ScrollToTop';
 // import Contact from './pages/Contact';
 // import NotFound from './pages/NotFound';
 
@@ -17,6 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
