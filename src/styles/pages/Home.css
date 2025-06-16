@@ -200,3 +200,9 @@ body {
     flex-direction: column;
   }
 }
+
+@media (max-width: 600px){
+  .home__hero-photo{
+    width: 100%;
+  }
+}
