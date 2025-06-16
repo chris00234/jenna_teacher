@@ -20,6 +20,19 @@ export default function Portfolio() {
         <p className="portfolio__subtitle">Sample Lesson Plans (PDFs &amp; Slides)</p>
       </section>
 
+      {/* Tustin Connect - 3rd Grade*/}
+      <section className="portfolio__section">
+        <h2>Tustin Connect - 3rd Grade</h2>
+        <div className="portfolio__grid">
+          <DocPreview
+            title="Tustin Connect 3rd Grade Lesson Plan/Slides"
+            subtitle="3rd Grade"
+            embedUrl="https://docs.google.com/presentation/d/1vt_qgcRvDbBpE4u4p0zvNKAfaPlBTPSj18uEiLN3smM/edit?slide=id.g341f093d255_0_5038#slide=id.g341f093d255_0_5038/preview"
+            viewUrl="https://docs.google.com/presentation/d/1vt_qgcRvDbBpE4u4p0zvNKAfaPlBTPSj18uEiLN3smM/edit?slide=id.g341f093d255_0_5038#slide=id.g341f093d255_0_5038"
+          />
+        </div>
+      </section>
+
       {/* Social Studies */}
       <section className="portfolio__section">
         <h2>Social Studies</h2>
