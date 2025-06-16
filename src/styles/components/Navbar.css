@@ -55,6 +55,7 @@
   }
 
   .navbar__menu {
+    display: none; /* hide by default */
     position: absolute;
     top: 100%;
     left: 0;
@@ -62,15 +63,15 @@
     background: #fff;
     flex-direction: column;
     align-items: center;
-    max-height: 300px; /* height limit for scrollable area */
-    overflow-y: auto;   /* enable vertical scrolling */
-    -webkit-overflow-scrolling: touch; /* smooth iOS scrolling */
+    max-height: 300px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     transition: max-height 0.3s ease;
     z-index: 1000;
   }
 
   .navbar__menu--open {
-    display: flex;
+    display: flex; /* only visible when open */
   }
 
   .navbar__link {
@@ -80,4 +81,5 @@
     border-top: 1px solid #eee;
   }
 }
+
 
