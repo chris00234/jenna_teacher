@@ -18,12 +18,23 @@ export default function TeachingExperience() {
         <h1>Teaching Experience</h1>
         {/* Download Resume button */}
         <a
-            href="src\assets\Jenna Cho- Resume.pdf"
+            href="src\assets\Jenna Cho - Resume.pdf"
             download
             className="teachexp__download-btn"
         >
             📄 Download Resume
         </a>
+
+        <section className="teachexp__section">
+          <h2>6th Grade ELD Summer School Teacher</h2>
+          <h3>Springbrook Elementary, Irvine Unified School District — Irvine, CA</h3>
+          <p className="teachexp__dates">June 2025 – Current</p>
+          <ul>
+            <li>Facilitate daily student-centered rotations using Language Power, Imagine Learning, and district resources to build academic vocabulary, reading comprehension, and oral language through targeted instruction and collaboration.</li>
+            <li>Administer diagnostic assessments to guide instructional planning based on students' language proficiency</li>
+            <li> Collaborate during PLC time with 6th grade teachers to align lesson planning, share instructional strategies, and support student growth across content areas.</li>
+          </ul>
+        </section>
 
         <section className="teachexp__section">
           <h2>K – 3rd Grade Long-Term Substitute Teacher</h2>
