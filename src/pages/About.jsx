@@ -91,6 +91,7 @@ export default function About() {
             {/* Credentials */}
             <li>Preliminary Multiple Subject Credential</li>
             <li>CSET Korean Subtest III &amp; V</li>
+            <li>Google Certified Educator I</li>
         </ul>
         </section>
 

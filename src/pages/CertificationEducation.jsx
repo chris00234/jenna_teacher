@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import credentialImg from '../assets/credential.png';
 import csunLogo from '../assets/csun_logo.png';
+import googleCert from '../assets/google.png';
 import '../styles/pages/CertificationEducation.css';
 
 export default function CertificationEducation() {
@@ -25,6 +26,14 @@ export default function CertificationEducation() {
         <div className="certedu__image-wrapper">
           <img
             src={credentialImg}
+            alt="Multiple Subject Teaching Credential verification"
+          />
+        </div>
+        <h3>Google Certified Educator Level 1</h3>
+        <div className="certedu__image-wrapper">
+          <img
+            style={{ width: '500px' }}
+            src={googleCert}
             alt="Multiple Subject Teaching Credential verification"
           />
         </div>
