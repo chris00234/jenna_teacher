@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/amazing_insects_book.html",
+      "destination": "/amazing_insects_book.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
