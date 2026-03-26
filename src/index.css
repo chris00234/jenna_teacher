@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+  --color-warm-50: #fdf8f6;
+  --color-warm-100: #f7ede8;
+  --color-warm-200: #f0ddd5;
+  --color-warm-300: #e4c8b8;
+  --color-warm-400: #d4a991;
+  --color-warm-500: #c48b6a;
+  --color-warm-600: #b4744e;
+  --color-warm-700: #965e3e;
+  --color-warm-800: #7a4d35;
+  --color-warm-900: #64402e;
+  --color-accent: #e07a5f;
+  --color-accent-dark: #c96a51;
+  --color-accent-light: #f3a68e;
+  --color-sage: #6b8f71;
+  --color-sage-light: #8fb396;
+  --color-sage-dark: #567259;
+}
+
+/* Scroll-triggered fade-in */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduce section padding globally for tighter feel */
+.section-tight {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}

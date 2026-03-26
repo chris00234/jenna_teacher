@@ -1,56 +1,47 @@
-import React from 'react';
-import { FaPhone, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import '../styles/components/Footer.css';
-
-function getCurrentYear() {
-  return new Date().getFullYear();
-}
+import { FiMail, FiPhone, FiLinkedin } from 'react-icons/fi';
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer__container">
-        <p className="footer__text">© {getCurrentYear()} Jenna Cho. All rights reserved.</p>
-        <div className="footer__contact">
-          <a href="mailto:jennachoteacher@gmail.com" className="footer__link">
-            jennachoteacher@gmail.com
-          </a>
-        </div>
-        <ul className="footer__social">
-          <li>
+    <footer className="border-t border-stone-200 bg-white">
+      <div className="mx-auto max-w-6xl px-6 py-12">
+        <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
+          <div>
+            <p className="font-serif text-lg font-bold text-stone-800">Jenna Cho</p>
+            <p className="mt-1 text-sm text-stone-500">
+              Elementary Educator · STEM & PBL Specialist
+            </p>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <a
+              href="mailto:jennachoteacher@gmail.com"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-warm-100 text-warm-700 transition hover:bg-warm-200"
+              aria-label="Email"
+            >
+              <FiMail size={18} />
+            </a>
             <a
               href="tel:+12133320153"
-              target="_blank"
-              rel="noopener noreferrer"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-warm-100 text-warm-700 transition hover:bg-warm-200"
               aria-label="Phone"
-              className="footer__icon--flipped"
             >
-              <FaPhone className="footer__icon footer__icon--flipped" />
+              <FiPhone size={18} />
             </a>
-          </li>
-          <li>
             <a
               href="https://www.linkedin.com/in/jenna-cho-728a972b5/"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-warm-100 text-warm-700 transition hover:bg-warm-200"
               aria-label="LinkedIn"
-              className="footer__icon"
             >
-              <FaLinkedin />
+              <FiLinkedin size={18} />
             </a>
-          </li>
-          {/* <li>
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="footer__icon"
-            >
-              <FaTwitter />
-            </a>
-          </li> */}
-        </ul>
+          </div>
+        </div>
+
+        <p className="mt-8 text-center text-xs text-stone-400">
+          &copy; {new Date().getFullYear()} Jenna Cho. All rights reserved.
+        </p>
       </div>
     </footer>
   );

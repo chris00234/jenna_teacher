@@ -1,132 +1,165 @@
-import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { FiAward, FiBookOpen, FiGlobe, FiHeart } from 'react-icons/fi';
+import { useFadeIn } from '../hooks/useFadeIn';
+
 import headshot from '../assets/headshot.jpg';
-import '../styles/pages/About.css';
+import credentialImg from '../assets/credential.png';
+import csunLogo from '../assets/csun_logo.png';
+import googleCert from '../assets/google.png';
+
+function Section({ children, className = '' }) {
+  const ref = useFadeIn();
+  return <section ref={ref} className={`fade-in-up ${className}`}>{children}</section>;
+}
+
+const VALUES = [
+  { icon: FiHeart, title: 'Nurturing Environment', text: 'Every child deserves to feel safe, valued, and seen. I build classroom communities rooted in trust, empathy, and mutual respect.' },
+  { icon: FiBookOpen, title: 'Interdisciplinary Learning', text: 'I weave subjects together so students see connections — science meets art, math meets storytelling, coding meets creativity.' },
+  { icon: FiGlobe, title: 'Cultural Responsiveness', text: 'I honor each student\'s unique background, language, and experiences, making them assets rather than barriers to learning.' },
+  { icon: FiAward, title: 'Growth Mindset', text: 'Mistakes are learning opportunities. I teach students to embrace challenges, persist through difficulty, and celebrate progress.' },
+];
 
 export default function About() {
-  const [isLightboxOpen, setLightboxOpen] = useState(false);
   return (
     <>
       <Helmet>
-        <title>About Me – Jenna Cho</title>
-        <meta
-          name="description"
-          content="Learn about my background, teaching philosophy, and classroom approach."
-        />
+        <title>About — Jenna Cho | Teaching Portfolio</title>
+        <meta name="description" content="Learn about Jenna Cho's teaching philosophy, education, certifications, and classroom approach." />
       </Helmet>
 
-      {/* Hero / Intro */}
-      <section className="about__hero">
-        <img
-          src={headshot}
-          alt="Jenna Cho headshot"
-          className="about__photo"
-          onClick={() => setLightboxOpen(true)}
-          style={{ cursor: 'pointer' }}
-        />
-        <div className="about__intro">
-          <h1>Hi, I’m Jenna Cho</h1>
-          <p>
-            Hello! My name is Jenna Cho, and I am a passionate and adaptable educator committed to creating inclusive, engaging, and standards-based learning experiences for all students. I earned my Bachelor of Arts in Liberal Studies through the Integrated Teacher Education Program and hold a Preliminary California Multiple Subject Teaching Credential from California State University, Northridge.
-          </p>
-        </div>
-      </section>
-
-      {/* Teaching Priortize */}
-      <section className="about__section">
-        <h2>As a teacher, I prioritize:</h2>
-        <ul>
-            <li>Differentiated instruction to meet the diverse needs of students, including English Learners and students with autism</li>
-            <li>Data-informed teaching, using tools like iReady to tailor instruction and track growth</li>
-            <li>Collaborative practices, working closely with staff and families to support the whole child</li>
-            <li>Creative and integrated curriculum design, connecting subjects like ELA with art, SEL, and science through hands-on learning</li>
-        </ul>
-      </section>
-
-      {/* Experience Timeline */}
-      <section className="about__section about__timeline">
-        <h2>Experience</h2>
-        <ul>
-          <li>
-            <strong>Feburary 2025 – Present:</strong> K - 3rd Grade Long-Term Substitute Teacher, Tustin Connect K-12, Tustin Unified School District
-          </li>
-          <li>
-            <strong>December 2024 – Present:</strong> Substitute Teacher, Irvine Unified School District (IUSD)
-          </li>
-          <li>
-            <strong>September 2024 – December 2024:</strong> 3rd Grade Teacher Long-Term Substitute, Irvine International Academy
-          </li>
-          <li>
-            <strong>October 2023 – June 2024:</strong> Resident Substitute Teacher, El Cerrito Elementary School, La Habra City School District
-          </li>
-        </ul>
-      </section>
-
-      {/* Skills / Tools */}
-        <section className="about__section">
-        <h2>Skills &amp; Tools</h2>
-        <ul className="about__skills">
-            {/* Instructional Design */}
-            <li>Differentiated &amp; Standards-Based Instruction</li>
-            <li>GATE-Aligned ELA &amp; Math Planning</li>
-            <li>Project-Based Learning (Scratch, Robotics, Minecraft)</li>
-            <li>Depth &amp; Complexity Questioning</li>
-
-            {/* Assessment & Data */}
-            <li>Data-Driven Instruction (iReady, Formative/Summative)</li>
-            <li>MTSS/Tiered Intervention Support</li>
-            <li>Hybrid Grading &amp; Progress Tracking</li>
-
-            {/* Curriculum & Tech */}
-            <li>Words Their Way Phonics Program</li>
-            <li>Mystery Science Curriculum</li>
-            <li>Google Classroom &amp; G Suite</li>
-            <li>SEL Integration &amp; Classroom Management</li>
-
-            {/* Communication & Languages */}
-            <li>Parent Conferences &amp; Progress Reports</li>
-            <li>Languages:<br />English (Native),<br /> Korean (Native),<br /> Chinese (Basic)</li>
-
-            {/* Credentials */}
-            <li>Preliminary Multiple Subject Credential</li>
-            <li>CSET Korean Subtest III &amp; V</li>
-            <li>Google Certified Educator I</li>
-        </ul>
-        </section>
-
-
-      {/* Call to Action */}
-      <section className="about__cta">
-        <p>Want to see my lesson plans and projects?</p>
-        <Link to="/portfolio" className="btn btn-primary">
-          View Portfolio
-        </Link>
-      </section>
-      {/* lightbox modal */}
-      {isLightboxOpen && (
-        <div
-          className="lightbox"
-          onClick={() => setLightboxOpen(false)}
-        >
-          <div
-            className="lightbox__content"
-            onClick={e => e.stopPropagation()}
-          >
-            <button
-              className="lightbox__close"
-              onClick={() => setLightboxOpen(false)}
-              aria-label="Close full-size image"
-            >
-              ×
-            </button>
-            <img
-              src={headshot}
-              alt="Full-size Jenna Cho headshot"
-            />
+      {/* Hero */}
+      <section className="bg-gradient-to-b from-warm-50 to-white pt-28 pb-16 md:pt-36">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 px-6 md:flex-row md:gap-16">
+          <img
+            src={headshot}
+            alt="Jenna Cho"
+            className="h-64 w-64 rounded-3xl border-4 border-white object-cover shadow-xl md:h-80 md:w-80"
+          />
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Meet Mrs. Cho</p>
+            <h1 className="mt-2 font-serif text-3xl font-bold text-stone-900 md:text-4xl">
+              Hi, I'm Jenna
+            </h1>
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-stone-600">
+              I'm an elementary school teacher with a passion for making learning hands-on,
+              joyful, and meaningful. With experience across K-6 classrooms in Orange County,
+              I specialize in Project-Based Learning and STEM integration that connects students
+              to the real world.
+            </p>
+            <p className="mt-4 max-w-lg text-base leading-relaxed text-stone-600">
+              My background in education at CSUN, combined with my Google Certified Educator
+              credential, equips me to blend traditional pedagogy with modern technology in
+              ways that genuinely engage young learners.
+            </p>
           </div>
         </div>
-      )}
+      </section>
+
+      {/* Philosophy */}
+      <Section className="px-6 py-16">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Teaching Philosophy</p>
+            <h2 className="mt-3 font-serif text-3xl font-bold text-stone-800 md:text-4xl">
+              What Guides My Teaching
+            </h2>
+          </div>
+
+          <div className="mt-10 grid gap-8 sm:grid-cols-2">
+            {VALUES.map(({ icon: Icon, title, text }) => (
+              <div key={title} className="flex gap-5 rounded-2xl border border-stone-100 bg-white p-7 shadow-sm transition hover:shadow-md">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-warm-100 text-accent">
+                  <Icon size={20} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-stone-800">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-stone-500">{text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Goal as Educator */}
+      <Section className="bg-warm-50/50 px-6 py-16">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-serif text-3xl font-bold text-stone-800 text-center md:text-4xl">
+            My Goal as an Educator
+          </h2>
+          <div className="mt-8 space-y-5 text-base leading-relaxed text-stone-600">
+            <p>
+              As an elementary school teacher, I strive to foster a nurturing and dynamic environment
+              that sparks curiosity and cultivates a lifelong love of learning through interactive,
+              interdisciplinary methods.
+            </p>
+            <p>
+              I prioritize inclusivity and support students' emotional and social growth by honoring
+              each child's unique background and experiences. By collaborating with families and
+              community partners, I enrich students' educational journeys and promote their overall well-being.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Diverse Classrooms */}
+      <Section className="px-6 py-16">
+        <div className="mx-auto max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">Diverse & Contemporary Classrooms</p>
+          <h2 className="mt-3 font-serif text-3xl font-bold text-stone-800 md:text-4xl">
+            Reflective Practice & Cultural Knowledge
+          </h2>
+          <div className="mt-8 space-y-5 text-base leading-relaxed text-stone-600">
+            <p>
+              The importance of being a reflective practitioner in building knowledge about learners
+              and their culture cannot be overstated. I continuously analyze and adapt my teaching
+              methods to meet the diverse needs of students, fostering an inclusive and effective
+              learning environment.
+            </p>
+            <p>
+              For example, while working at El Cerrito Elementary School, I noticed students on the
+              autism spectrum responded well to visual aids and structured routines. By incorporating
+              these elements, I improved engagement and behavior management, demonstrating how
+              reflection leads to better outcomes for all students.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Certifications */}
+      <Section className="bg-warm-50/50 px-6 py-16">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Credentials & Education</p>
+            <h2 className="mt-3 font-serif text-3xl font-bold text-stone-800 md:text-4xl">
+              Certification & Education
+            </h2>
+          </div>
+
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            {/* Credential */}
+            <div className="rounded-2xl border border-stone-100 bg-white p-8 text-center shadow-sm">
+              <img src={credentialImg} alt="CA Teaching Credential" className="mx-auto h-20 w-20 rounded-xl object-contain" />
+              <h3 className="mt-5 font-semibold text-stone-800">Preliminary Multiple Subject Credential</h3>
+              <p className="mt-2 text-sm text-stone-500">California Commission on Teacher Credentialing</p>
+            </div>
+
+            {/* CSUN */}
+            <div className="rounded-2xl border border-stone-100 bg-white p-8 text-center shadow-sm">
+              <img src={csunLogo} alt="CSUN" className="mx-auto h-20 w-20 rounded-xl object-contain" />
+              <h3 className="mt-5 font-semibold text-stone-800">California State University, Northridge</h3>
+              <p className="mt-2 text-sm text-stone-500">Bachelor's in Child & Adolescent Development</p>
+            </div>
+
+            {/* Google */}
+            <div className="rounded-2xl border border-stone-100 bg-white p-8 text-center shadow-sm">
+              <img src={googleCert} alt="Google Certified" className="mx-auto h-20 w-20 rounded-xl object-contain" />
+              <h3 className="mt-5 font-semibold text-stone-800">Google Certified Educator</h3>
+              <p className="mt-2 text-sm text-stone-500">Level 1 — Google for Education</p>
+            </div>
+          </div>
+        </div>
+      </Section>
     </>
   );
 }
