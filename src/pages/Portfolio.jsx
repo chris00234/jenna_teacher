@@ -128,15 +128,99 @@ const STUDENT_WORK = [
   },
 ];
 
-const LESSON_DOCS = [
+const LESSON_PLAN_SECTIONS = [
   {
-    title: 'Tustin Connect 2nd & 3rd Grade Lesson Plan/Slides',
-    embedUrl: 'https://docs.google.com/presentation/d/1vt_qgcRvDbBpE4u4p0zvNKAfaPlBTPSj18uEiLN3smM/edit?slide=id.g341f093d255_0_5038#slide=id.g341f093d255_0_5038/preview',
+    heading: 'Tustin Connect — 2nd & 3rd Grade',
+    docs: [
+      {
+        title: 'Tustin Connect 2nd & 3rd Grade Lesson Plan/Slides',
+        subtitle: '3rd Grade',
+        embedUrl: 'https://docs.google.com/presentation/d/1vt_qgcRvDbBpE4u4p0zvNKAfaPlBTPSj18uEiLN3smM/edit?slide=id.g341f093d255_0_5038#slide=id.g341f093d255_0_5038/preview',
+        viewUrl: 'https://docs.google.com/presentation/d/1vt_qgcRvDbBpE4u4p0zvNKAfaPlBTPSj18uEiLN3smM/edit?slide=id.g341f093d255_0_5038#slide=id.g341f093d255_0_5038',
+      },
+    ],
   },
   {
-    title: 'El Cerrito 1st Grade Lesson Plans',
-    embedUrl: 'https://docs.google.com/presentation/d/1OFZoSYWl8VmKD1l4xxBRUzRNF6l6s_h4Kqr7PeMwGb0/edit?slide=id.g341f093d255_0_5038#slide=id.g341f093d255_0_5038/preview',
+    heading: 'Social Studies',
+    docs: [
+      {
+        title: 'Social Studies Lesson Plan',
+        subtitle: '2nd grade',
+        embedUrl: 'https://docs.google.com/document/d/1ffR_zB7xu3aL3fGDReuenG-qXP0lcxoJA-4a-gPee58/preview',
+        viewUrl: 'https://docs.google.com/document/d/1ffR_zB7xu3aL3fGDReuenG-qXP0lcxoJA-4a-gPee58',
+      },
+      {
+        title: 'Social Studies Lesson Slides',
+        subtitle: '2nd grade',
+        embedUrl: 'https://docs.google.com/presentation/d/1p9b-rUMu7LfOduFQ9t0-f3cWlUWk4zIHji-_W6TCf0s/preview',
+        viewUrl: 'https://docs.google.com/presentation/d/1p9b-rUMu7LfOduFQ9t0-f3cWlUWk4zIHji-_W6TCf0s/',
+      },
+    ],
   },
+  {
+    heading: 'Arts',
+    docs: [
+      {
+        title: 'Arts Lesson Plan',
+        subtitle: '2nd grade',
+        embedUrl: 'https://docs.google.com/document/d/1MRAxETRBPtff2msMv0JWwnvR9dlIsPbn_BnEaLALNmI/preview',
+        viewUrl: 'https://docs.google.com/document/d/1MRAxETRBPtff2msMv0JWwnvR9dlIsPbn_BnEaLALNmI',
+      },
+      {
+        title: 'Arts Lesson Slides',
+        subtitle: '2nd grade',
+        embedUrl: 'https://drive.google.com/file/d/10_sat8wbNkOaUWYvswatMq3E7R5fVgJx/preview',
+        viewUrl: 'https://drive.google.com/file/d/10_sat8wbNkOaUWYvswatMq3E7R5fVgJx',
+      },
+    ],
+  },
+  {
+    heading: 'English Language Arts & Math',
+    docs: [
+      {
+        title: 'English Language Arts',
+        subtitle: '2nd grade',
+        embedUrl: 'https://docs.google.com/document/d/1A1nEk65Kvw3L5N6k5aN_5qVEApEIRqsM5yCBwRzRguM/preview',
+        viewUrl: 'https://docs.google.com/document/d/1A1nEk65Kvw3L5N6k5aN_5qVEApEIRqsM5yCBwRzRguM',
+      },
+      {
+        title: 'Math',
+        subtitle: '2nd grade',
+        embedUrl: 'https://docs.google.com/document/d/1KQrDE5Kb9vopWsiolC0Z6nFoi-w8FY3wZiG5pSA8uxg/preview',
+        viewUrl: 'https://docs.google.com/document/d/1KQrDE5Kb9vopWsiolC0Z6nFoi-w8FY3wZiG5pSA8uxg',
+      },
+    ],
+  },
+  {
+    heading: 'Science',
+    docs: [
+      {
+        title: 'Science Lesson Plan',
+        subtitle: '2nd grade',
+        embedUrl: 'https://docs.google.com/document/d/1xahTJK349X92aaap-nhkpsncokp7WUGwpIH2Ud8nSTk/preview',
+        viewUrl: 'https://docs.google.com/document/d/1xahTJK349X92aaap-nhkpsncokp7WUGwpIH2Ud8nSTk',
+      },
+      {
+        title: 'Science Lesson Slides',
+        subtitle: '2nd grade',
+        embedUrl: 'https://docs.google.com/presentation/d/1ToQ146UXfeYjBbdmOudFCOXoN9anXWHKOsOdLMkcRR8/preview',
+        viewUrl: 'https://docs.google.com/presentation/d/1ToQ146UXfeYjBbdmOudFCOXoN9anXWHKOsOdLMkcRR8',
+      },
+    ],
+  },
+];
+
+const RECOMMENDATION_LETTERS = [
+  { title: 'Deanna Putnam', subtitle: 'Principal of El Cerrito Elementary School', embedUrl: 'https://drive.google.com/file/d/1Ac7ZxJPKRiqLpPhJmn0NDefBAv0hO1bF/preview', viewUrl: 'https://drive.google.com/file/d/1Ac7ZxJPKRiqLpPhJmn0NDefBAv0hO1bF' },
+  { title: 'Paula Denen', subtitle: 'Former Principal of LAUSD and University Supervisor at CSUN', embedUrl: 'https://drive.google.com/file/d/1T5Qvmm1WIOzE2tRpJnHpZmi5OM_MBqG9/preview', viewUrl: 'https://drive.google.com/file/d/1T5Qvmm1WIOzE2tRpJnHpZmi5OM_MBqG9' },
+  { title: 'Tiffany Ramirez', subtitle: '6th grade teacher, El Cerrito Elementary School', embedUrl: 'https://drive.google.com/file/d/1OgdThSIgMGH9oLjXl-WucphOcRqWv97t/preview', viewUrl: 'https://drive.google.com/file/d/1OgdThSIgMGH9oLjXl-WucphOcRqWv97t' },
+  { title: 'Myrissa Ortiz', subtitle: '2nd grade teacher, Tulsa Street Elementary School', embedUrl: 'https://drive.google.com/file/d/1Alf4cOaW90WBACnponNnUHsYrHoQlYpz/preview', viewUrl: 'https://drive.google.com/file/d/1Alf4cOaW90WBACnponNnUHsYrHoQlYpz' },
+  { title: 'Yiyuan Tiffany Zhang', subtitle: 'Assistant Principal, Irvine International Academy', embedUrl: 'https://drive.google.com/file/d/1bP2KiDcjfxR900oU0EMSo1wGv-f3awgH/preview', viewUrl: 'https://drive.google.com/file/d/1bP2KiDcjfxR900oU0EMSo1wGv-f3awgH' },
+];
+
+const TEACHING_DOCS = [
+  { title: 'Early Field Experience Log', subtitle: '57 hours completed', embedUrl: 'https://drive.google.com/file/d/1DBRDDo8ueBifx3qxdWSl-R3fYPHjf7HB/preview', viewUrl: 'https://drive.google.com/file/d/1DBRDDo8ueBifx3qxdWSl-R3fYPHjf7HB' },
+  { title: 'Multiple Subject Credential Program', subtitle: '', embedUrl: 'https://drive.google.com/file/d/1OCJmGmrNpRhuif7bB-VD8CjxW2htWnNo/preview', viewUrl: 'https://drive.google.com/file/d/1OCJmGmrNpRhuif7bB-VD8CjxW2htWnNo' },
 ];
 
 export default function Portfolio() {
@@ -163,13 +247,39 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Lesson Plan Docs */}
-      <Section className="px-6 py-16">
+      {/* Lesson Plans by Subject */}
+      {LESSON_PLAN_SECTIONS.map(({ heading, docs }) => (
+        <Section key={heading} className="px-6 py-12">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="font-serif text-2xl font-bold text-stone-800">{heading}</h2>
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
+              {docs.map((doc) => (
+                <DocPreview key={doc.title} title={doc.title} subtitle={doc.subtitle} embedUrl={doc.embedUrl} viewUrl={doc.viewUrl} />
+              ))}
+            </div>
+          </div>
+        </Section>
+      ))}
+
+      {/* Recommendation Letters */}
+      <Section className="px-6 py-12">
         <div className="mx-auto max-w-5xl">
-          <h2 className="font-serif text-2xl font-bold text-stone-800">Lesson Plans & Slides</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {LESSON_DOCS.map((doc) => (
-              <DocPreview key={doc.title} title={doc.title} embedUrl={doc.embedUrl} />
+          <h2 className="font-serif text-2xl font-bold text-stone-800">Recommendation Letters</h2>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {RECOMMENDATION_LETTERS.map((doc) => (
+              <DocPreview key={doc.title} title={doc.title} subtitle={doc.subtitle} embedUrl={doc.embedUrl} viewUrl={doc.viewUrl} />
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Teaching Documentation */}
+      <Section className="px-6 py-12">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="font-serif text-2xl font-bold text-stone-800">Teaching Documentation</h2>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {TEACHING_DOCS.map((doc) => (
+              <DocPreview key={doc.title} title={doc.title} subtitle={doc.subtitle} embedUrl={doc.embedUrl} viewUrl={doc.viewUrl} />
             ))}
           </div>
         </div>
