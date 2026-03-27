@@ -11,81 +11,149 @@ function Section({ children, className = '' }) {
 const EXPERIENCES = [
   {
     role: '6th Grade ELD Summer School Teacher',
-    school: 'Springbrook Elementary, Irvine USD',
+    school: 'Springbrook Elementary, Irvine Unified School District',
     city: 'Irvine, CA',
-    date: 'Summer 2026',
+    date: 'June 2025 – Current',
     highlights: [
-      'Designed and delivered English Language Development curriculum for 6th graders',
-      'Differentiated instruction for multilingual learners at varying proficiency levels',
-      'Integrated STEM activities to build academic language through hands-on projects',
+      'Facilitate daily student-centered rotations using Language Power, Imagine Learning, and district resources to build academic vocabulary, reading comprehension, and oral language through targeted instruction and collaboration.',
+      'Administer diagnostic assessments to guide instructional planning based on students\' language proficiency.',
+      'Collaborate during PLC time with 6th grade teachers to align lesson planning, share instructional strategies, and support student growth across content areas.',
     ],
   },
   {
-    role: 'K-3 Long-Term Substitute Teacher',
-    school: 'Tustin Connect, Tustin USD',
+    role: 'K – 3rd Grade Long-Term Substitute Teacher',
+    school: 'Tustin Connect K-12, Tustin Unified School District',
     city: 'Tustin, CA',
-    date: '2025 – 2026',
+    date: 'February 2025 – Present',
     highlights: [
-      'Managed multi-grade classrooms (K-3) with differentiated instruction',
-      'Implemented Project-Based Learning units across subjects',
-      'Created a safe, inclusive environment for 25+ students daily',
+      'Led differentiated, standards-based instruction in a self-contained K–3 multi-grade classroom.',
+      'Delivered daily GATE-aligned ELA instruction incorporating Depth & Complexity thinking tools.',
+      'Integrated Words Their Way, SEL, Mystery Science, plus standards-based music, art & science tied to weekly themes.',
+      'Managed in-person and hybrid grading across K–6, including data tracking and online assignment input.',
     ],
   },
   {
-    role: 'Student Teacher — 1st Grade',
-    school: 'El Cerrito Elementary, Irvine USD',
+    role: 'Long-Term Substitute 3rd Grade Teacher',
+    school: 'Irvine International Academy',
     city: 'Irvine, CA',
-    date: '2024 – 2025',
+    date: 'September 2024 – January 2025',
     highlights: [
-      'Led full-day instruction under mentor teacher supervision',
-      'Developed standards-based lesson plans aligned to CA Common Core',
-      'Adapted instruction for students on the autism spectrum using visual aids',
+      'Crafted & executed dynamic, standards-based ELA & Math curricula in an engaging, highly organized environment.',
+      'Used iReady data to boost reading proficiency from 27%→45% and math from 21%→29%.',
+      'Implemented small-group instruction to enhance comprehension & problem-solving skills.',
+      'Communicated progress in parent conferences using diagnostic & formative data.',
+      'Collaborated with colleagues to ensure seamless curriculum alignment.',
     ],
   },
   {
     role: 'Substitute Teacher',
-    school: 'Various Schools, Irvine USD',
+    school: 'Irvine Unified School District (IUSD)',
     city: 'Irvine, CA',
-    date: '2023 – 2024',
+    date: 'June 2024 – August 2024',
     highlights: [
-      'Substitute taught across K-6 classrooms in multiple schools',
-      'Maintained classroom management and lesson continuity',
-      'Received positive feedback from administrators for reliability',
+      'Delivered high-quality instruction across TK–12, maintaining strong classroom management.',
+      'Adapted lessons to diverse needs and collaborated with staff to align with district standards.',
     ],
   },
   {
-    role: 'After-School Program Instructor',
-    school: 'Think Together',
-    city: 'Orange County, CA',
-    date: '2022 – 2023',
+    role: '2nd-Grade Summer School Lead Teacher',
+    school: 'E-Plex Education Complex',
+    city: 'Buena Park, CA',
+    date: 'June 2024 – August 2024',
     highlights: [
-      'Facilitated academic enrichment and homework support for K-5 students',
-      'Led STEM activities and creative arts programming',
-      'Built positive relationships with students and families',
+      'Developed engaging English, Writing & Math lesson plans, integrating robotics for STEM learning.',
+      'Assessed performance via observations, assignments & tests; collaborated on progress reports.',
+      'Designed & taught a basic sewing class, fostering creativity & fine motor skills.',
     ],
   },
   {
-    role: 'Classroom Volunteer & Tutor',
-    school: 'Various Elementary Schools',
-    city: 'Orange County, CA',
-    date: '2020 – 2022',
+    role: 'Korean Teacher',
+    school: 'E-Plex Education Complex',
+    city: 'Buena Park, CA',
+    date: 'January 2024 – August 2024',
     highlights: [
-      'Tutored struggling readers in small groups',
-      'Assisted lead teachers with classroom preparation and student support',
-      'Gained foundational experience in elementary education settings',
+      'Created & taught Korean basics to grades 1–6, from alphabet to sentence creation.',
+      'Managed testing data; strategies raised individual scores by 95%.',
+    ],
+  },
+  {
+    role: '2nd-Grade Afterschool Teacher',
+    school: 'E-Plex Education Complex',
+    city: 'Buena Park, CA',
+    date: 'January 2024 – August 2024',
+    highlights: [
+      'Designed literacy, math & social studies lessons aligned to Common Core.',
+      'Implemented open-door policy to involve parents in feedback & collaboration.',
+      'Boosted reading & math comprehension by 40% via daily "Genius Packets."',
+    ],
+  },
+  {
+    role: 'Short-Term Kindergarten Teacher',
+    school: 'El Cerrito Elementary School',
+    city: 'La Habra, CA',
+    date: 'March 2024',
+    highlights: [
+      'Designed differentiated, standards-based lessons for individual student needs.',
+      'Organized an Open House showcasing student work & classroom activities.',
+      'Built classroom management systems to engage students in a positive learning environment.',
+    ],
+  },
+  {
+    role: 'Resident Substitute Teacher',
+    school: 'El Cerrito Elementary School, La Habra City School District',
+    city: 'La Habra, CA',
+    date: 'October 2023 – June 2024',
+    highlights: [
+      'Supported "Code to the Future" coding & CS program with Scratch, robotics & Minecraft.',
+      'Worked across grades K–6, including autism-spectrum classes; provided tailored support.',
+      'Served as MTSS Assistant: mentored students, modeled strategies & led leveled small groups.',
+      'Organized a 4th-grade field trip (29 students) to a Class Act Youth Concert.',
+    ],
+  },
+  {
+    role: 'Substitute Teacher',
+    school: 'La Habra City School District',
+    city: 'La Habra, CA',
+    date: 'August 2023 – October 2023',
+    highlights: [
+      'Delivered instruction TK–8 in absence of regular teachers, ensuring continuity.',
+      'Participated in planning meetings & provided structured feedback on classroom experiences.',
+      'Earned repeat requests from staff due to organized, reflective practice.',
+    ],
+  },
+  {
+    role: 'Full-Time Student Teacher (2nd & 5th Grade)',
+    school: 'Tulsa St. & Darby Ave. Elementary Schools',
+    city: 'Granada Hills, CA',
+    date: 'January 2022 – December 2022',
+    highlights: [
+      'Crafted CA Standards-aligned lessons across Math, ELA, PE, Music, Social Science & Science.',
+      'Provided RtI and individualized support via Benchmark Advance, Eureka & CGI Math.',
+      'Delivered targeted small-group instruction to boost below-grade-level student progress.',
+    ],
+  },
+  {
+    role: 'Teacher & President',
+    school: 'Korean School',
+    city: 'Northridge, CA',
+    date: 'July 2013 – 2018',
+    highlights: [
+      'Taught Korean language & culture to grades 5–12; prepared weekly lesson plans.',
+      'Maintained detailed student records (scores, attendance); led educator meetings.',
+      'Achieved 98% pass rate on SAT Korean & ACTFL assessments.',
     ],
   },
 ];
 
 export default function Experience() {
   const [showAll, setShowAll] = useState(false);
-  const visible = showAll ? EXPERIENCES : EXPERIENCES.slice(0, 4);
+  const visible = showAll ? EXPERIENCES : EXPERIENCES.slice(0, 5);
 
   return (
     <>
       <Helmet>
         <title>Experience — Jenna Cho | Teaching Portfolio</title>
-        <meta name="description" content="Jenna Cho's teaching experience — from K-6 substitute teaching to STEM summer school instructor." />
+        <meta name="description" content="Overview of Jenna Cho's varied teaching roles, from K–3 long-term subs to student teaching and beyond." />
       </Helmet>
 
       {/* Hero */}
@@ -143,13 +211,13 @@ export default function Experience() {
             ))}
           </div>
 
-          {EXPERIENCES.length > 4 && !showAll && (
+          {EXPERIENCES.length > 5 && !showAll && (
             <div className="mt-8 text-center">
               <button
                 onClick={() => setShowAll(true)}
                 className="inline-flex items-center gap-1 rounded-xl border border-stone-200 bg-white px-6 py-3 text-sm font-medium text-stone-600 transition hover:bg-warm-50 hover:border-accent/30"
               >
-                View Earlier Experience <FiChevronDown size={16} />
+                View All {EXPERIENCES.length} Positions <FiChevronDown size={16} />
               </button>
             </div>
           )}

@@ -13,10 +13,10 @@ function Section({ children, className = '' }) {
 }
 
 const VALUES = [
-  { icon: FiHeart, title: 'Nurturing Environment', text: 'Every child deserves to feel safe, valued, and seen. I build classroom communities rooted in trust, empathy, and mutual respect.' },
-  { icon: FiBookOpen, title: 'Interdisciplinary Learning', text: 'I weave subjects together so students see connections — science meets art, math meets storytelling, coding meets creativity.' },
-  { icon: FiGlobe, title: 'Cultural Responsiveness', text: 'I honor each student\'s unique background, language, and experiences, making them assets rather than barriers to learning.' },
-  { icon: FiAward, title: 'Growth Mindset', text: 'Mistakes are learning opportunities. I teach students to embrace challenges, persist through difficulty, and celebrate progress.' },
+  { icon: FiHeart, title: 'Differentiated Instruction', text: 'Meeting the diverse needs of students, including English Learners and students with autism, through tailored approaches.' },
+  { icon: FiBookOpen, title: 'Data-Informed Teaching', text: 'Using tools like iReady to tailor instruction and track growth, ensuring every student progresses.' },
+  { icon: FiGlobe, title: 'Collaborative Practices', text: 'Working closely with staff and families to support the whole child academically, socially, and emotionally.' },
+  { icon: FiAward, title: 'Creative Curriculum Design', text: 'Connecting subjects like ELA with art, SEL, and science through hands-on, integrated learning experiences.' },
 ];
 
 export default function About() {
@@ -38,30 +38,25 @@ export default function About() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-accent">Meet Mrs. Cho</p>
             <h1 className="mt-2 font-serif text-3xl font-bold text-stone-900 md:text-4xl">
-              Hi, I'm Jenna
+              Hi, I'm Jenna Cho
             </h1>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-stone-600">
-              I'm an elementary school teacher with a passion for making learning hands-on,
-              joyful, and meaningful. With experience across K-6 classrooms in Orange County,
-              I specialize in Project-Based Learning and STEM integration that connects students
-              to the real world.
-            </p>
-            <p className="mt-4 max-w-lg text-base leading-relaxed text-stone-600">
-              My background in education at CSUN, combined with my Google Certified Educator
-              credential, equips me to blend traditional pedagogy with modern technology in
-              ways that genuinely engage young learners.
+              I am a passionate and adaptable educator committed to creating inclusive, engaging, and
+              standards-based learning experiences for all students. I earned my Bachelor of Arts in
+              Liberal Studies through the Integrated Teacher Education Program and hold a Preliminary
+              California Multiple Subject Teaching Credential from California State University, Northridge.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Philosophy */}
+      {/* As a Teacher I Prioritize */}
       <Section className="px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Teaching Philosophy</p>
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">My Priorities</p>
             <h2 className="mt-3 font-serif text-3xl font-bold text-stone-800 md:text-4xl">
-              What Guides My Teaching
+              As a Teacher, I Prioritize
             </h2>
           </div>
 
@@ -77,6 +72,44 @@ export default function About() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Skills & Tools */}
+      <Section className="px-6 py-16">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Expertise</p>
+            <h2 className="mt-3 font-serif text-3xl font-bold text-stone-800 md:text-4xl">
+              Skills & Tools
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              'Differentiated & Standards-Based Instruction',
+              'GATE-Aligned ELA & Math Planning',
+              'Project-Based Learning (Scratch, Robotics, Minecraft)',
+              'Depth & Complexity Questioning',
+              'Data-Driven Instruction (iReady, Formative/Summative)',
+              'MTSS/Tiered Intervention Support',
+              'Hybrid Grading & Progress Tracking',
+              'Words Their Way Phonics Program',
+              'Mystery Science Curriculum',
+              'Google Classroom & G Suite',
+              'SEL Integration & Classroom Management',
+              'Parent Conferences & Progress Reports',
+              'Preliminary Multiple Subject Credential',
+              'CSET Korean Subtest III & V',
+              'Google Certified Educator I',
+            ].map(skill => (
+              <div key={skill} className="rounded-xl border border-stone-100 bg-white px-5 py-3.5 text-sm font-medium text-stone-700 shadow-sm">
+                {skill}
+              </div>
+            ))}
+            <div className="rounded-xl border border-stone-100 bg-white px-5 py-3.5 text-sm font-medium text-stone-700 shadow-sm">
+              Languages: English (Native), Korean (Native), Chinese (Basic)
+            </div>
           </div>
         </div>
       </Section>
@@ -148,7 +181,7 @@ export default function About() {
             <div className="rounded-2xl border border-stone-100 bg-white p-8 text-center shadow-sm">
               <img src={csunLogo} alt="CSUN" className="mx-auto h-20 w-20 rounded-xl object-contain" />
               <h3 className="mt-5 font-semibold text-stone-800">California State University, Northridge</h3>
-              <p className="mt-2 text-sm text-stone-500">Bachelor's in Child & Adolescent Development</p>
+              <p className="mt-2 text-sm text-stone-500">B.A. in Liberal Studies — Integrated Teacher Education Program</p>
             </div>
 
             {/* Google */}

@@ -34,6 +34,9 @@ import lg1 from '../assets/lg1.png';
 import lg2 from '../assets/lg2.png';
 import a1 from '../assets/a1.png';
 import a2 from '../assets/a2.png';
+import mail from '../assets/mail.png';
+import police from '../assets/police.png';
+import fire from '../assets/fire.png';
 
 function Section({ children, className = '' }) {
   const ref = useFadeIn();
@@ -43,21 +46,86 @@ function Section({ children, className = '' }) {
 const FILTERS = ['All', 'Lesson Plans', 'Student Work', 'Classroom Culture'];
 
 const STUDENT_WORK = [
-  { cat: 'Student Work', title: 'Stretchy Sentences', images: [stretchy1, stretchy2], desc: 'Developing descriptive writing through sentence expansion.' },
-  { cat: 'Student Work', title: 'Story Time', images: [st1, st2], desc: 'Creative storytelling with beginning, middle, and end.' },
-  { cat: 'Student Work', title: 'Pattern Blocks', images: [pt1, pt2], desc: 'Exploring symmetry and geometry with manipulatives.' },
-  { cat: 'Classroom Culture', title: 'How I Care for Our Planet', images: [care1, care2], desc: 'Integrated writing + art for Earth Day awareness.' },
-  { cat: 'Classroom Culture', title: 'Voting Day', images: [vote1, vote2], desc: 'Civic engagement through classroom elections.' },
-  { cat: 'Classroom Culture', title: 'Formal Observation', images: [formal1, formal2], desc: 'Peer-observed lesson demonstrating PBL strategies.' },
-  { cat: 'Student Work', title: 'Research Projects', images: [rp1, rp2], desc: 'Student-led research on animals and habitats.' },
-  { cat: 'Student Work', title: 'Social Studies', images: [ss1, ss2], desc: 'Community helpers and local government exploration.' },
-  { cat: 'Student Work', title: 'Family Math', images: [fm1, fm2], desc: 'Math activities connecting school and home learning.' },
-  { cat: 'Student Work', title: 'Morning Starter', images: [ms], desc: 'Daily warm-up routines building foundational skills.' },
-  { cat: 'Lesson Plans', title: 'Cloud Formations', images: [in1, in2, in3], desc: 'Scientific observation and classification of clouds.' },
-  { cat: 'Lesson Plans', title: 'ELA Workshop', images: [ela1, ela2], desc: 'Reading and writing workshop mini-lessons.' },
-  { cat: 'Lesson Plans', title: 'Math Centers', images: [m1, m2], desc: 'Differentiated math stations for varied learners.' },
-  { cat: 'Lesson Plans', title: 'Lego Coding', images: [lg1, lg2], desc: 'STEM integration through Lego robotics and coding.' },
-  { cat: 'Lesson Plans', title: 'Art Integration', images: [a1, a2], desc: 'Cross-curricular art projects with standards alignment.' },
+  {
+    cat: 'Student Work', title: 'Stretchy Sentence Fun!', images: [stretchy1, stretchy2],
+    desc: 'Kindergarten and 2nd grade work samples from the Earth Day & Poetry Month integrated ELA unit combining environmental awareness with poetic expression.',
+    school: 'Tustin Connect, Tustin USD',
+  },
+  {
+    cat: 'Student Work', title: 'Soundtrack for the Earth', images: [st1, st2],
+    desc: 'Students used author\'s craft tools such as alliteration, rhyme, imagery, and personification to create Earth-themed poems.',
+    school: 'Tustin Connect, Tustin USD',
+  },
+  {
+    cat: 'Student Work', title: 'Poem-Tale Author\'s Craft', images: [pt1, pt2],
+    desc: '1st grade work samples applying poetic techniques while expressing care and concern for the environment.',
+    school: 'Tustin Connect, Tustin USD',
+  },
+  {
+    cat: 'Classroom Culture', title: 'How I Care for Our Planet', images: [care1, care2],
+    desc: 'Art & ELA writing integration for Earth Day. Students brainstormed four ways to help save the Earth, wrote about each, then created drawings to visually represent their actions.',
+    school: 'Tustin Connect, Tustin USD',
+  },
+  {
+    cat: 'Student Work', title: 'Every Vote Counts — ELA', images: [vote1, vote2],
+    desc: 'From a lesson on "Every Vote Counts" (McGraw Hill Wonders). I created a customized worksheet to reinforce comprehension strategies — identifying the main idea and understanding the author\'s purpose.',
+    school: 'Irvine International Academy',
+  },
+  {
+    cat: 'Student Work', title: 'Formal Assessment — Kids to the Rescue', images: [formal1, formal2],
+    desc: 'Formal assessment evaluating understanding of "Kids to the Rescue" (McGraw Hill Wonders), including identifying the main idea, analyzing key details, and drawing connections to real-world problem-solving.',
+    school: 'Irvine International Academy',
+  },
+  {
+    cat: 'Student Work', title: 'Rescue Plan Poster Project', images: [rp1, rp2],
+    desc: 'Extension activity for "Kids to the Rescue." Students imagined a rescue scenario, outlined a plan, and presented their ideas visually on a poster, integrating writing and artistic expression.',
+    school: 'Irvine International Academy',
+  },
+  {
+    cat: 'Student Work', title: 'Social Studies, 2nd Grade', images: [ss1, ss2],
+    desc: '2nd grade social studies work samples.',
+    school: 'Student Teaching',
+  },
+  {
+    cat: 'Student Work', title: 'Figure Me Out — Math, 3rd Grade', images: [fm1, fm2],
+    desc: '3rd grade math work samples.',
+    school: 'Irvine International Academy',
+  },
+  {
+    cat: 'Lesson Plans', title: 'Mystery Science, 2nd Grade', images: [ms],
+    desc: '2nd grade Mystery Science work sample.',
+    school: 'Student Teaching',
+  },
+  {
+    cat: 'Lesson Plans', title: 'Science — What Is an Insect & Clouds Unit', images: [in1, in2, in3],
+    desc: '1st grade science units covering insect identification and cloud formations.',
+    school: 'El Cerrito Elementary',
+  },
+  {
+    cat: 'Lesson Plans', title: 'English Language Arts', images: [ela1, ela2],
+    desc: 'ELA Benchmark texts — Stone Soup (2nd grade) and a 5th grade reading sample.',
+    school: 'Student Teaching',
+  },
+  {
+    cat: 'Student Work', title: 'Math, 2nd Grade', images: [m1, m2],
+    desc: '2nd grade math worksheets.',
+    school: 'Student Teaching',
+  },
+  {
+    cat: 'Lesson Plans', title: 'Coding with Lego', images: [lg1, lg2],
+    desc: 'Students design and build working Lego Coding models, integrating computer science and engineering.',
+    school: 'El Cerrito Elementary',
+  },
+  {
+    cat: 'Lesson Plans', title: 'Fall Leaves — Cool & Warm Colors', images: [a1, a2],
+    desc: '2nd grade arts project exploring cool and warm color theory through fall leaf art.',
+    school: 'Student Teaching',
+  },
+  {
+    cat: 'Classroom Culture', title: 'Community Helpers Unit — Kindergarten', images: [mail, police, fire],
+    desc: 'Kindergarten arts and English integration exploring community helpers: mail carriers, police officers, and firefighters.',
+    school: 'El Cerrito Elementary',
+  },
 ];
 
 const LESSON_DOCS = [
@@ -131,11 +199,11 @@ export default function Portfolio() {
 
           {/* Grid */}
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {filtered.map(({ title, images, desc, cat }) => (
+            {filtered.map(({ title, images, desc, cat, school }) => (
               <div
                 key={title}
                 className="group cursor-pointer overflow-hidden rounded-2xl border border-stone-100 bg-white shadow-sm transition-all hover:shadow-lg hover:-translate-y-1"
-                onClick={() => setLightbox({ title, images, desc, cat })}
+                onClick={() => setLightbox({ title, images, desc, cat, school })}
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -148,6 +216,7 @@ export default function Portfolio() {
                 <div className="p-5">
                   <span className="text-xs font-medium text-accent">{cat}</span>
                   <h3 className="mt-1 font-semibold text-stone-800">{title}</h3>
+                  {school && <p className="mt-0.5 text-xs text-stone-400">{school}</p>}
                   <p className="mt-1 text-sm text-stone-500">{desc}</p>
                 </div>
               </div>
