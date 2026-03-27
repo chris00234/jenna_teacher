@@ -14,7 +14,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-4">
             <a
-              href="mailto:jennachoteacher@gmail.com"
+              href="mailto:jennacho@iusd.org"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-warm-100 text-warm-700 transition hover:bg-warm-200"
               aria-label="Email"
             >

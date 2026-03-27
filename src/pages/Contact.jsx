@@ -44,11 +44,11 @@ export default function Contact() {
 
                 <div className="mt-8 space-y-4">
                   <a
-                    href="mailto:jennachoteacher@gmail.com"
+                    href="mailto:jennacho@iusd.org"
                     className="flex items-center gap-4 rounded-xl border border-stone-100 bg-warm-50/50 px-5 py-4 text-sm font-medium text-stone-700 transition hover:bg-warm-100 hover:border-accent/20"
                   >
                     <FiMail className="text-accent" size={20} />
-                    jennachoteacher@gmail.com
+                    jennacho@iusd.org
                   </a>
 
                   <a

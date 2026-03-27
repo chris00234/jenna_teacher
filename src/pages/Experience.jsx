@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { FiMapPin, FiCalendar, FiChevronDown, FiDownload } from 'react-icons/fi';
+import { FiMapPin, FiCalendar, FiDownload } from 'react-icons/fi';
 import { useFadeIn } from '../hooks/useFadeIn';
 
 function Section({ children, className = '' }) {
@@ -10,10 +10,21 @@ function Section({ children, className = '' }) {
 
 const EXPERIENCES = [
   {
+    role: 'Substitute Teacher',
+    school: 'Irvine Unified School District & Tustin Unified School District',
+    city: 'Orange County, CA',
+    date: 'December 2024 – Present',
+    highlights: [
+      'Delivered high-quality instruction across TK–12 classrooms by maintaining strong classroom management, adapting to diverse student needs, and collaborating with staff to ensure alignment with district standards.',
+      'Supported preschoolers with autism in IUSD\'s ESN program through individualized care and structured routines.',
+      'Led class participation during the Jog-A-Thon at Loma Ridge Elementary (IUSD) by giving directions, managing transitions, and keeping students engaged throughout the event.',
+    ],
+  },
+  {
     role: '6th Grade ELD Summer School Teacher',
     school: 'Springbrook Elementary, Irvine Unified School District',
     city: 'Irvine, CA',
-    date: 'June 2025 – Current',
+    date: 'June 2025 – July 2025',
     highlights: [
       'Facilitate daily student-centered rotations using Language Power, Imagine Learning, and district resources to build academic vocabulary, reading comprehension, and oral language through targeted instruction and collaboration.',
       'Administer diagnostic assessments to guide instructional planning based on students\' language proficiency.',
@@ -21,81 +32,26 @@ const EXPERIENCES = [
     ],
   },
   {
-    role: 'K – 3rd Grade Long-Term Substitute Teacher',
-    school: 'Tustin Connect K-12, Tustin Unified School District',
+    role: 'K–3rd Grade Long-Term Substitute Teacher',
+    school: 'Tustin Connect K–12, Tustin Unified School District',
     city: 'Tustin, CA',
-    date: 'February 2025 – Present',
+    date: 'February 2025 – May 2025',
     highlights: [
-      'Led differentiated, standards-based instruction in a self-contained K–3 multi-grade classroom.',
-      'Delivered daily GATE-aligned ELA instruction incorporating Depth & Complexity thinking tools.',
-      'Integrated Words Their Way, SEL, Mystery Science, plus standards-based music, art & science tied to weekly themes.',
-      'Managed in-person and hybrid grading across K–6, including data tracking and online assignment input.',
+      'Developed and delivered daily GATE-aligned ELA instruction using Depth and Complexity thinking tools to promote advanced thinking and academic rigor.',
+      'Integrated Words Their Way, SEL, Mystery Science, and standards-based music, art, and science aligned to weekly themes to enhance engagement and critical thinking.',
+      'Maintained daily communication with the classroom teacher and collaborated with the Intervention Lead, teachers, and paraeducators to ensure instructional alignment and consistent learning across grade levels.',
     ],
   },
   {
-    role: 'Long-Term Substitute 3rd Grade Teacher',
+    role: '3rd Grade Teacher, Long-Term Substitute',
     school: 'Irvine International Academy',
     city: 'Irvine, CA',
-    date: 'September 2024 – January 2025',
+    date: 'September 2024 – December 2024',
     highlights: [
-      'Crafted & executed dynamic, standards-based ELA & Math curricula in an engaging, highly organized environment.',
-      'Used iReady data to boost reading proficiency from 27%→45% and math from 21%→29%.',
-      'Implemented small-group instruction to enhance comprehension & problem-solving skills.',
-      'Communicated progress in parent conferences using diagnostic & formative data.',
-      'Collaborated with colleagues to ensure seamless curriculum alignment.',
-    ],
-  },
-  {
-    role: 'Substitute Teacher',
-    school: 'Irvine Unified School District (IUSD)',
-    city: 'Irvine, CA',
-    date: 'June 2024 – August 2024',
-    highlights: [
-      'Delivered high-quality instruction across TK–12, maintaining strong classroom management.',
-      'Adapted lessons to diverse needs and collaborated with staff to align with district standards.',
-    ],
-  },
-  {
-    role: '2nd-Grade Summer School Lead Teacher',
-    school: 'E-Plex Education Complex',
-    city: 'Buena Park, CA',
-    date: 'June 2024 – August 2024',
-    highlights: [
-      'Developed engaging English, Writing & Math lesson plans, integrating robotics for STEM learning.',
-      'Assessed performance via observations, assignments & tests; collaborated on progress reports.',
-      'Designed & taught a basic sewing class, fostering creativity & fine motor skills.',
-    ],
-  },
-  {
-    role: 'Korean Teacher',
-    school: 'E-Plex Education Complex',
-    city: 'Buena Park, CA',
-    date: 'January 2024 – August 2024',
-    highlights: [
-      'Created & taught Korean basics to grades 1–6, from alphabet to sentence creation.',
-      'Managed testing data; strategies raised individual scores by 95%.',
-    ],
-  },
-  {
-    role: '2nd-Grade Afterschool Teacher',
-    school: 'E-Plex Education Complex',
-    city: 'Buena Park, CA',
-    date: 'January 2024 – August 2024',
-    highlights: [
-      'Designed literacy, math & social studies lessons aligned to Common Core.',
-      'Implemented open-door policy to involve parents in feedback & collaboration.',
-      'Boosted reading & math comprehension by 40% via daily "Genius Packets."',
-    ],
-  },
-  {
-    role: 'Short-Term Kindergarten Teacher',
-    school: 'El Cerrito Elementary School',
-    city: 'La Habra, CA',
-    date: 'March 2024',
-    highlights: [
-      'Designed differentiated, standards-based lessons for individual student needs.',
-      'Organized an Open House showcasing student work & classroom activities.',
-      'Built classroom management systems to engage students in a positive learning environment.',
+      'Increased students at or above grade level by 71% in Reading and 25% in Math from Window 1 to Window 2 by using iReady data to deliver targeted, impactful instruction.',
+      'Delivered standards-based ELA and Math lessons using Wonders and Singapore Math, aligning instruction with the school\'s curriculum and mission in a structured, engaging learning environment.',
+      'Facilitated differentiated ELA and Math groups to meet the needs of diverse learners, including students with IEPs and English Learners, through targeted, inclusive instruction.',
+      'Provided daily customized classwork and homework packets for English Learners and a student with autism to support consistent, differentiated access to grade-level learning.',
     ],
   },
   {
@@ -104,56 +60,27 @@ const EXPERIENCES = [
     city: 'La Habra, CA',
     date: 'October 2023 – June 2024',
     highlights: [
-      'Supported "Code to the Future" coding & CS program with Scratch, robotics & Minecraft.',
-      'Worked across grades K–6, including autism-spectrum classes; provided tailored support.',
-      'Served as MTSS Assistant: mentored students, modeled strategies & led leveled small groups.',
-      'Organized a 4th-grade field trip (29 students) to a Class Act Youth Concert.',
-    ],
-  },
-  {
-    role: 'Substitute Teacher',
-    school: 'La Habra City School District',
-    city: 'La Habra, CA',
-    date: 'August 2023 – October 2023',
-    highlights: [
-      'Delivered instruction TK–8 in absence of regular teachers, ensuring continuity.',
-      'Participated in planning meetings & provided structured feedback on classroom experiences.',
-      'Earned repeat requests from staff due to organized, reflective practice.',
-    ],
-  },
-  {
-    role: 'Full-Time Student Teacher (2nd & 5th Grade)',
-    school: 'Tulsa St. & Darby Ave. Elementary Schools',
-    city: 'Granada Hills, CA',
-    date: 'January 2022 – December 2022',
-    highlights: [
-      'Crafted CA Standards-aligned lessons across Math, ELA, PE, Music, Social Science & Science.',
-      'Provided RtI and individualized support via Benchmark Advance, Eureka & CGI Math.',
-      'Delivered targeted small-group instruction to boost below-grade-level student progress.',
-    ],
-  },
-  {
-    role: 'Teacher & President',
-    school: 'Korean School',
-    city: 'Northridge, CA',
-    date: 'July 2013 – 2018',
-    highlights: [
-      'Taught Korean language & culture to grades 5–12; prepared weekly lesson plans.',
-      'Maintained detailed student records (scores, attendance); led educator meetings.',
-      'Achieved 98% pass rate on SAT Korean & ACTFL assessments.',
+      'Provided MTSS small-group instruction, led project-based coding lessons using Scratch, robotics, and Minecraft, supported a 4th-grade field trip, and served as a short-term Kindergarten substitute facilitating Open House and student work displays.',
     ],
   },
 ];
 
-export default function Experience() {
-  const [showAll, setShowAll] = useState(false);
-  const visible = showAll ? EXPERIENCES : EXPERIENCES.slice(0, 5);
+const LICENSES = [
+  { name: 'Google Certified Educator Level 1', date: 'June 2025' },
+  { name: 'CSET Korean Subtest III and V', date: 'May 2024' },
+  { name: 'Preliminary Multiple Subject Teaching Credential', date: 'August 2023' },
+  { name: 'Reading Instruction Competence Assessment I, II, III (CSUN)', date: 'June 2023' },
+  { name: 'Basic Skills Required Completed (CSUN)', date: 'December 2022' },
+  { name: 'From Here to Career: Career Readiness Program (CSUN)', date: 'April 2022' },
+  { name: 'Trained Mentor at Mentor Collective (CSUN)', date: 'May 2021' },
+];
 
+export default function Experience() {
   return (
     <>
       <Helmet>
         <title>Experience — Jenna Cho | Teaching Portfolio</title>
-        <meta name="description" content="Overview of Jenna Cho's varied teaching roles, from K–3 long-term subs to student teaching and beyond." />
+        <meta name="description" content="Jenna Cho's teaching experience across K–12 classrooms in Orange County." />
       </Helmet>
 
       {/* Hero */}
@@ -180,7 +107,7 @@ export default function Experience() {
       <Section className="px-6 py-20">
         <div className="mx-auto max-w-3xl">
           <div className="relative border-l-2 border-warm-200 pl-8 md:pl-12">
-            {visible.map(({ role, school, city, date, highlights }, i) => (
+            {EXPERIENCES.map(({ role, school, city, date, highlights }, i) => (
               <div key={i} className="relative mb-12 last:mb-0">
                 {/* Timeline dot */}
                 <div className="absolute -left-[calc(2rem+5px)] top-1.5 flex h-4 w-4 items-center justify-center rounded-full border-2 border-accent bg-white md:-left-[calc(3rem+5px)]">
@@ -210,17 +137,26 @@ export default function Experience() {
               </div>
             ))}
           </div>
+        </div>
+      </Section>
 
-          {EXPERIENCES.length > 5 && !showAll && (
-            <div className="mt-8 text-center">
-              <button
-                onClick={() => setShowAll(true)}
-                className="inline-flex items-center gap-1 rounded-xl border border-stone-200 bg-white px-6 py-3 text-sm font-medium text-stone-600 transition hover:bg-warm-50 hover:border-accent/30"
-              >
-                View All {EXPERIENCES.length} Positions <FiChevronDown size={16} />
-              </button>
-            </div>
-          )}
+      {/* Licenses & Certificates */}
+      <Section className="bg-warm-50/50 px-6 py-16">
+        <div className="mx-auto max-w-3xl">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent">Professional Development</p>
+            <h2 className="mt-3 font-serif text-2xl font-bold text-stone-800 md:text-3xl">
+              Licenses & Certificates
+            </h2>
+          </div>
+          <div className="mt-10 space-y-4">
+            {LICENSES.map(({ name, date }) => (
+              <div key={name} className="flex items-center justify-between rounded-xl border border-stone-100 bg-white px-6 py-4 shadow-sm">
+                <span className="text-sm font-medium text-stone-700">{name}</span>
+                <span className="shrink-0 text-xs text-stone-400">{date}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
     </>
